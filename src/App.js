@@ -1,23 +1,20 @@
-import logo from './logo.svg';
 import './App.css';
+import { Routes, Route, Link } from "react-router-dom"
+import Characters from './Pages/Characters';
+import CharacterDetails from './Pages/CharacterDetails';
+import HouseDetails from './Pages/HouseDetails';
 
 function App() {
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div><h1 id="welcome">HARRY POTTER LIBRARY</h1></div>
+      <Routes>
+        <Route path="/house/:houseId" element={<HouseDetails />}/>
+        <Route path="/character/:characterId" element={<CharacterDetails />}/>
+        <Route exact path="/" element={<Characters />}/>
+      </Routes>
+      <br></br>
     </div>
   );
 }
