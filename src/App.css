@@ -29,7 +29,7 @@ select, button, option {
   font-size:15px;
   font-family: 'Ubuntu Mono', monospace;
   color: white;  
-  background-color: crimson;
+  background-color: rgb(146, 10, 37);
   text-decoration: none;
   border:0;
 
